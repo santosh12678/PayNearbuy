@@ -1,0 +1,29 @@
+About the business - 
+The Agent(Paynearby's customer) uses our app on his mobile to server the end customer(PayeeRefID) with several banking/financial products. 
+
+About the files - 
+interview_txn_data.csv file has transaction data
+Amount - transaction value
+PayeeRefID - end customer ID
+CreatedDate - Transaction timestamp
+TransactionStatusRefID - 2 is for sucess and anything else is failed transaction
+AgentRefID - The retailer ID (Our Customer)
+DistributorRefID - Distributor acquires and gives credit to Agents
+
+interview_ticket_data.csv file is the customer care data
+TicketCreatedDateTime - Ticket created time
+AgentRefID - The retailer ID (Our Customer)
+
+Problem Statement - 
+Build a churn prediction model for the Agent.
+
+How to prepare data - 
+Define how many days of inactivity can be considered as churn.
+Lets say the no. of days are X, then take a past date, build features till past date and the label would be Agent's presense in 'past date + X days'
+Split the data into training and test and fit the model.
+Predict on the present date.
+
+Evaluation Parameter - 
+Higher weightage is given to variable creation, followed by accuracy.
+
+
